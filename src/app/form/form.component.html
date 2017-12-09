@@ -1,0 +1,26 @@
+<div class="centerblock" *ngIf="recipes.editing">
+  <h2>Редагувати рецепт</h2>
+  <form (ngSubmit)="add()" >
+    <div class="form-group">
+    <input [value]="recipe.name" name="name" type="text" minlength="5" placeholder="Назва" >
+    <input [value]="recipe.recDesc" name="recDesc" type="text" minlength="10" placeholder="Короткий опис" >
+    <textarea [value]="recipe.recText" name="recText" placeholder="Повний текст" ></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Зберегти</button>
+    </div>
+  </form>
+</div>
+<div class="centerblock" *ngIf="!recipes.editing">
+  <h2>Додати новий рецепт</h2>
+  <form (ngSubmit)="create()">
+    <div class="form-group">
+      <input [(ngModel)]="newRecipe.name" name="name" type="text" minlength="5" placeholder="Назва" required>
+      <input [(ngModel)]="newRecipe.recDesc" name="recDesc" type="text" minlength="10" placeholder="Короткий опис" required>
+      <textarea [(ngModel)]="newRecipe.recText" name="recText" placeholder="Повний текст" required></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Додати</button>
+    </div>
+  </form>
+</div>

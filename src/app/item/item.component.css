@@ -1,0 +1,27 @@
+a{
+  font-size: 24px;
+  font-weight: 300;
+  color: #62554b;
+  text-decoration: none;
+}
+a:hover{
+  border-bottom: 1px dotted #62554b;
+}
+.recipes dt{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+}
+.recipes dd{
+  list-style: none;
+  margin-bottom: 30px;
+}
+.recipes button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.editing{
+  background-color: #f2a60c;
+}

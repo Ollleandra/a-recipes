@@ -1,0 +1,11 @@
+<dl class="recipes" [ngClass]="{'editing': recipe.editing}">
+  <dt>
+  <p><a href="">{{recipe.name}}</a></p>
+  <p>
+    <button (click)="toggle()"><span class="icon-pencil"></span></button>
+    <button (click)="onDelete()"><span class="icon-trash"></span></button>
+  </p>
+  </dt>
+  <dd class="desc">{{recipe.recDesc}}
+  </dd>
+</dl>

@@ -1,0 +1,4 @@
+<div class="rightblock" *ngIf="recipes.length">
+  <h2>Перелік рецептів</h2>
+  <app-item *ngFor="let recipe of recipes" [recipe]="recipe" (delete)="delete(recipe)"></app-item>
+</div>
